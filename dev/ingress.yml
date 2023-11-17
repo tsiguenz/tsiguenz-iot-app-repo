@@ -1,0 +1,18 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: dev-app
+  labels:
+    app: dev-app
+spec:
+  rules:
+  - host: devapp.tmatis.local
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: dev-app
+            port:
+              number: 8888

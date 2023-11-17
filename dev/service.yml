@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: dev-app
+  labels:
+    app: dev-app
+spec:
+  type: ClusterIP
+  ports:
+  - port: 8888
+    targetPort: 8888
+  selector:
+    app: dev-app
