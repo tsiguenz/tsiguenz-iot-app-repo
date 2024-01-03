@@ -6,7 +6,7 @@ metadata:
     app: dev-app
 spec:
   rules:
-  - host: devapp.tmatis.local
+  - host: devapp.tsiguenz.local
     http:
       paths:
       - path: /
